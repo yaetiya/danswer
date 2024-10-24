@@ -31,12 +31,6 @@ services:
       options:
         max-size: "50m"
         max-file: "6"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.api.rule=Host(`danswer.teno.live`) && (PathPrefix(`/api`) || Path(`/openapi.json`))"
-      - "traefik.http.middlewares.api-strip.stripprefix.prefixes=/api"
-      - "traefik.http.routers.api.middlewares=api-strip"
-      - "traefik.http.services.api.loadbalancer.server.port=8080"
 
   background:
     image: danswer/danswer-backend:${IMAGE_TAG:-latest}
