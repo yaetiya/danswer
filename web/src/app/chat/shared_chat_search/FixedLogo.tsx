@@ -34,7 +34,7 @@ export default function FixedLogo() {
                 )}
               </div>
             ) : (
-              <HeaderTitle>Danswer</HeaderTitle>
+              <HeaderTitle>Search</HeaderTitle>
             )}
           </div>
         </div>
