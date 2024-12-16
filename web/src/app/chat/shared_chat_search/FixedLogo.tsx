@@ -13,6 +13,11 @@ export default function FixedLogo() {
   const settings = combinedSettings?.settings;
   const enterpriseSettings = combinedSettings?.enterpriseSettings;
 
+  console.error(
+    "NEXT_PUBLIC_DO_NOT_USE_TOGGLE_OFF_DANSWER_POWERED",
+    NEXT_PUBLIC_DO_NOT_USE_TOGGLE_OFF_DANSWER_POWERED
+  );
+
   return (
     <>
       <Link
