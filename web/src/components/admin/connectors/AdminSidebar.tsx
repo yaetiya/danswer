@@ -58,11 +58,11 @@ export function AdminSidebar({ collections }: { collections: Collection[] }) {
                       <HeaderTitle>
                         {enterpriseSettings.application_name}
                       </HeaderTitle>
-                      {!NEXT_PUBLIC_DO_NOT_USE_TOGGLE_OFF_DANSWER_POWERED && (
+                      {/* {!NEXT_PUBLIC_DO_NOT_USE_TOGGLE_OFF_DANSWER_POWERED && (
                         <p className="text-xs text-subtle">
                           Powered by Danswer
                         </p>
-                      )}
+                      )} */}
                     </div>
                   ) : (
                     <HeaderTitle>Danswer</HeaderTitle>
