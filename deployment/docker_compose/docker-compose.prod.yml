@@ -185,7 +185,30 @@ services:
 
 volumes:
   db_volume:
+    name: danswer_db_volume
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${DANSWER_VOLUME_PATH:-/opt/danswer}/postgres_data
   vespa_volume:
-  # Created by the container itself
+    name: danswer_vespa_volume
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${DANSWER_VOLUME_PATH:-/opt/danswer}/vespa_data
   model_cache_huggingface:
+    name: danswer_model_cache
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${DANSWER_VOLUME_PATH:-/opt/danswer}/model_cache
   indexing_huggingface_model_cache:
+    name: danswer_indexing_model_cache
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${DANSWER_VOLUME_PATH:-/opt/danswer}/indexing_model_cache
